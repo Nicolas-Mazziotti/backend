@@ -1,0 +1,7 @@
+[
+    {"id":"1","modelo": "Xiaomi 9", "memoria":"6gb", "precio": 220 },
+    {"id":"2","modelo": "Xiaomi 10", "memoria":"6gb", "precio": 260 },
+    {"id":"3","modelo": "Xiaomi 10 PRO", "memoria":"8gb", "precio": 320 },
+    {"id":"4","modelo": "Xiaomi 11 Mi Lite", "memoria":"8gb", "precio": 350 }
+    
+]
