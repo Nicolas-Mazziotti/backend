@@ -1,5 +1,6 @@
 const express = require("express")
 const { Router } = express
+const _ = require("underscore") 
 //Traigo el json de products
 const productsData = require("../productsData.json")
 console.log(productsData)
@@ -9,6 +10,8 @@ console.log(productsData)
 let router = new Router()
 
 //Defino nuevas Routes con router
+
+//Muestro todos los productos
 router.get ("/", (req, res) => {
     res.json(productsData)
 })
@@ -25,9 +28,22 @@ router.post("/", (req, res) => {
     } else {
         res.send("Error en el ingreso")
     }
-    
+    })
 
-})
+// Elimino  productos segun su id
+
+    router.delete("/:id", (req, res) => {
+        const { id } = req.params;
+        productsData.forEach((product, i) =>{
+            if(product.id == id){
+                productsData.splice(i, 1)
+            }
+        } )
+        res.send(productsData)
+        
+        })
+        
+    
 
 
 // exporto router

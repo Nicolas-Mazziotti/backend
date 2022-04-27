@@ -16,5 +16,5 @@ app.use("/api/products" , productsRoutes)
 
 //Empezando el servidor
 app.listen(8080, ()=>{
-    console.log(`Server on Port${3000}`)
+    console.log(`Server on Port ${8080}`)
 })

@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Nicolas-Mazziotti/backend#readme",
   "dependencies": {
     "express": "^4.18.0",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "underscore": "^1.13.3"
   }
 }
