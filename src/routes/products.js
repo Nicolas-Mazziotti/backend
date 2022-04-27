@@ -30,6 +30,24 @@ router.post("/", (req, res) => {
     }
     })
 
+// Actualizar productos
+
+    router.put("/:id", (req, res) =>{
+        const {id} = req.params
+        const {modelo, precio} = req.body
+        if(modelo && precio){
+            productsData.forEach((product, i) =>{
+                if(product.id == id){
+                    product.modelo = modelo
+                    product.precio = precio
+                }
+            })
+            res.json(productsData)
+        }else{
+            res.json({error: "Error no se pudo actualizar"})
+        }
+    })
+
 // Elimino  productos segun su id
 
     router.delete("/:id", (req, res) => {
@@ -40,7 +58,6 @@ router.post("/", (req, res) => {
             }
         } )
         res.send(productsData)
-        
         })
         
     
