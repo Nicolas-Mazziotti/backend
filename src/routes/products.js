@@ -1,11 +1,21 @@
 const express = require("express")
 const { Router } = express
+// const multer = require("multer")
 const _ = require("underscore") 
 //Traigo el json de products
 const productsData = require("../productsData.json")
 console.log(productsData)
 
+// const storage = multer.diskStorage({
+//     destination: function (req, file, cb){
+//         cb(null, "uploads")
+//     },
+//     filename: function(req, file, cb){
+//         cb(null, file.originalname)
+//     }
+// })
 
+// let upload = multer ({storage})
 //intancio Router
 let router = new Router()
 
