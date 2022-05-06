@@ -1,4 +1,5 @@
 const express = require("express")
+const req = require("express/lib/request")
 const res = require("express/lib/response")
 const app = express()
 const productosArr = require("./productsData.json")
@@ -26,10 +27,10 @@ app.set("views,", "./views")
 
 //creo productos (envio informacion al servidor)
 app.post("/create", (req, res) =>{
-    req.body
-    console.log(req.body)
-    res.send("Enviado")
-} )
+    let obj = req.body
+    productosArr.push(obj)
+    res.render("saveProduct")
+})
 
 
 app.listen(8080, () =>{
