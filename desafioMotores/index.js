@@ -4,6 +4,7 @@ const res = require("express/lib/response")
 const app = express()
 const productosArr = require("./productsData.json")
 
+app.use(express.static("public"));
 //middleware (convierte informacion que viene del body a json)
 app.use(express.json())
 //formateo la url
