@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "modelo": "Xiaomi Redmi Note 9",
+        "precio": 200
+    },
+    {
+        "id": 2,
+        "modelo": "Xiaomi Redmi Note 10",
+        "precio": 250
+    },
+    {
+        "id": 3,
+        "modelo": "Xiaomi Mi Lite 11",
+        "precio": 350
+    }
+]
