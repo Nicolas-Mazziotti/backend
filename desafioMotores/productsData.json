@@ -2,16 +2,19 @@
     {
         "id": 1,
         "modelo": "Xiaomi Redmi Note 9",
-        "precio": 200
+        "precio": 200,
+        "img": "https://cdn4.iconfinder.com/data/icons/iphone-5s-5c/128/Pink-iPhone-5C.png"
     },
     {
         "id": 2,
         "modelo": "Xiaomi Redmi Note 10",
-        "precio": 250
+        "precio": 250,
+        "img":"https://cdn4.iconfinder.com/data/icons/iphone-5s-5c/128/iPhone-5C-Green.png"
     },
     {
         "id": 3,
         "modelo": "Xiaomi Mi Lite 11",
-        "precio": 350
+        "precio": 350,
+        "img": "https://cdn4.iconfinder.com/data/icons/iphone-5s-5c/128/iPhone-5C-Yellow.png"
     }
 ]

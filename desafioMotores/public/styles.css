@@ -11,3 +11,20 @@
 .inputName{
     size: 100px;
 }
+
+
+.itemCard{
+    margin: 2rem;
+    border: solid;
+    min-width: 220px;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemCardContainer{
+    width: 250x;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
