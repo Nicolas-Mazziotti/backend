@@ -1,0 +1,44 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+    body 
+    h1 Formulario de Carga 
+
+    div
+        form(action="/create", method="post")
+            label(for="exampleInputEmail1" class="form-label") Modelo
+            input(type="text" name="modelo")  
+            label(for="exampleInputEmail1" class="form-label") Precio
+            input(type="text" name="modelo")
+            label(for="exampleInputEmail1" class="form-label") Precio
+            input(type="text" name="img")
+            div    
+            button(type="submit") Save
+
+//-   <body>
+//-     <h1> Formulario de Carga</h1>
+//- <!-- En el form pongo la ruta + metodo + nombres en los input para que los tome como objetos en el post -->
+//-   <div class="text-center" >
+//-     <form action="/create" method="post" class="w-50 border border-primary mx-auto formProducts">
+//-       <div class="mb-3 col-10 mx-auto">
+//-         <label for="exampleInputEmail1" class="form-label">Name</label>
+//-         <input type="text" name="modelo" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+//-       </div>
+//-       <div class="mx-auto col-10">
+//-           <label for="exampleInputEmail1" class="form-label">Price</label>
+//-           <input type="text" name= "precio" class="form-control inputName" id="exampleInputEmail1" aria-describedby="emailHelp">
+//-         </div>
+//-         <div class="mx-auto col-10">
+//-           <label for="exampleInputEmail1" class="form-label">Image</label>
+//-           <input type="text" name= "img" class="form-control inputName" id="exampleInputEmail1" aria-describedby="emailHelp">
+//-         </div>
+//-         <div class="btnSave">
+//-           <button type="submit" class="btn btn-primary">Save</button>
+//-         </div>
+//-         <a href="/products"> Ir a productos</a>
+//- </body>
+//- </html>

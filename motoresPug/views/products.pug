@@ -1,0 +1,13 @@
+<!-- Para incluir componentes en las views include + ruta(./nav)-->
+html    
+    head    
+        title 
+
+        body 
+            h1 Productos:   
+                div 
+                    ul 
+                        each prod in data  
+                            li= prod.modelo   
+                             p=  prod.precio
+                            img(src=prod.img, alt="")
