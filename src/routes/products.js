@@ -23,6 +23,7 @@ let router = new Router()
 
 //Muestro todos los productos
 router.get ("/", (req, res) => {
+    res.sendFile(__dirname + "/index.html")
     res.json(productsData)
 })
 

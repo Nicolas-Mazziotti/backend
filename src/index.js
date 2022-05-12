@@ -6,7 +6,7 @@ const productsRoutes = require("./routes/products")
 
 
 //Middleware
-app.use("/static", express.static("public"))
+app.use("/", express.static("public"))
 //MW servidor recibe formato json y los lee
 app.use(express.json())
 
