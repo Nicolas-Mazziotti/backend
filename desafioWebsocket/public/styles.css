@@ -1,0 +1,20 @@
+.productsContainer{
+    background-color: antiquewhite;
+
+
+}
+
+.productsList{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.products{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}

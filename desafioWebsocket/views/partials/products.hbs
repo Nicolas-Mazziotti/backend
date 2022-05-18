@@ -1,0 +1,16 @@
+<h1>Products</h1>
+<div class="productsContainer"> 
+    <ul class="productsList">
+        {{#each data}}
+        <div class="products">
+        <img src={{this.img}} alt="">
+        <li>{{this.modelo}} : USD {{this.precio}}</li>
+        </div>
+        {{/each}}
+
+    </ul>
+</div>
+
+
+    
+    
