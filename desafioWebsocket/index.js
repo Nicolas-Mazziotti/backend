@@ -33,11 +33,11 @@ const server = http.createServer(app) //app = para que el servidor sea basado en
 const port = process.env.PORT || 3005// elije el puerto que se le asigna una vez en la nube sino el 8080
 
 //Array de productos
-const productosCargados = [
+const productosCargados = []
+const mensajesCargados = [
     {
-        modelo: "Xiaomi Redmi Note 9",
-        precio: 200,
-        img: "https://cdn4.iconfinder.com/data/icons/iphone-5s-5c/128/Pink-iPhone-5C.png"
+        email: "nicolas@gmail.com",
+        mensaje: "Hola"
     }
 ]
 
@@ -47,9 +47,9 @@ const io = new Server (server) //le paso el servidor que cree nativo http
 
 //Abro un canal del servidor parte del back
 io.on("connection", (socket) => { //socket contiene todos los eventos io, emit ,etc
-    console.log("Usuario conectado")
-
-    socket.emit("message_back", productosCargados) //envio array al front
+    console.log("Usuario conectado al form")
+    //productos
+    socket.emit("message_back", productosCargados) //envio array de productos al front
     socket.on("message_client",(data) =>{
         console.log(data)
     })
@@ -57,9 +57,25 @@ io.on("connection", (socket) => { //socket contiene todos los eventos io, emit ,
         console.log(data)
 
         productosCargados.push(data)
+        io.sockets.emit("message_back", productosCargados) // conecto a todos los que esten en el servidor
+    })
+
+    //chat
+    socket.emit("mensaje_back", mensajesCargados)
+    socket.on("mensaje_cliente", (mensajesData) => {
+        console.log(mensajesData)
+    })
+    socket.on("data_mensaje", (mensajesData) => {
+        console.log(mensajesData)
+        mensajesCargados.push(mensajesData)
     })
     
 })
+
+    // io.on("connection", (socket) => {
+    //     console.log("Usuario conectado al chat")
+    //     socket.emit()
+    // })
 
 server.listen(port, () => {
     console.log("Port Running" + port)
