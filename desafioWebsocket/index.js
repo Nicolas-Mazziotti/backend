@@ -32,6 +32,15 @@ const server = http.createServer(app) //app = para que el servidor sea basado en
 
 const port = process.env.PORT || 3005// elije el puerto que se le asigna una vez en la nube sino el 8080
 
+//Array de productos
+const productosCargados = [
+    {
+        modelo: "Xiaomi Redmi Note 9",
+        precio: 200,
+        img: "https://cdn4.iconfinder.com/data/icons/iphone-5s-5c/128/Pink-iPhone-5C.png"
+    }
+]
+
 //Servidor de socket
 const { Server, Socket } = require("socket.io")
 const io = new Server (server) //le paso el servidor que cree nativo http
@@ -39,6 +48,17 @@ const io = new Server (server) //le paso el servidor que cree nativo http
 //Abro un canal del servidor parte del back
 io.on("connection", (socket) => { //socket contiene todos los eventos io, emit ,etc
     console.log("Usuario conectado")
+
+    socket.emit("message_back", productosCargados) //envio array al front
+    socket.on("message_client",(data) =>{
+        console.log(data)
+    })
+    socket.on("data_client", (data) =>{
+        console.log(data)
+
+        productosCargados.push(data)
+    })
+    
 })
 
 server.listen(port, () => {

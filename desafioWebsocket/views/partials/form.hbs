@@ -8,17 +8,18 @@
 </head>
 <body>
     
-    <form action="">
+    <form>
         <label for=""> Modelo </label>
-        <input type="text">
+        <input type="text" id="formModelo">
         <label for=""> Precio</label>
-        <input type="text">
+        <input type="text" id="formPrecio">
         <label for="">Imagen</label>
-        <input type="text">
+        <input type="text" id="formImagen">
         <input type="submit" value="Enviar">
     </form>
+    <div id="containerProductos"></div>
 
      <script src="/socket.io/socket.io.js"></script> <!-- Socket de parte del cliente-->
-    <script src="../../public/index.js"></script>
+    <script src="/index.js"></script>
 </body>
 </html>
