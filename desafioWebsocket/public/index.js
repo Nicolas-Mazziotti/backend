@@ -46,10 +46,13 @@ const socket = io() // a traves del script en el index llamo a io y el form ya s
     //funcion de lo que se renderiza en el html de mensajes agregados
     
     const renderMensajes = (mensajesData) => {
+    
+            const h = new Date();
+        
         let html = mensajesData.map(msj =>{
             return `
-            <p> ${msj.email}</p>
-            <p> ${msj.mensaje}
+            <strong> ${msj.email} : ${h}</strong>
+            <p> ${msj.mensaje}</p>
             `
         }).join (" ")
         document.querySelector("#containerMensajes").innerHTML = html
@@ -58,9 +61,15 @@ const socket = io() // a traves del script en el index llamo a io y el form ya s
     //funcion para que el cliente agregue los mensajes desde el form
 
     const addMessage = () => {
+        
+        // const formularioMsj = document.getElementById('formulario')
+        // formularioMsj.onsubmit = (e) => {
+        //     e.preventDefault()
+        // 
+    
         let objForms = 
     {
-        email: document.querySelector("#FormEmail").value,
+        email: document.querySelector("#formEmail").value,
         mensaje: document.querySelector("#formMensaje").value
     }
         socket.emit("data_mensajes", objForms)

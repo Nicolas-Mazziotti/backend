@@ -18,3 +18,20 @@
     align-items: center;
     margin: 2rem;
 }
+
+
+.chatContainer{
+    border: solid 2px;
+    width: 500px;
+    justify-content: center;
+    margin: auto;
+    margin-top: 2rem;
+
+}
+
+#formEmail{
+    min-width: 350px;
+}
+#formMensaje{
+    min-width: 350px;
+}

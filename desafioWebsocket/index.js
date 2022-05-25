@@ -34,12 +34,7 @@ const port = process.env.PORT || 3005// elije el puerto que se le asigna una vez
 
 //Array de productos
 const productosCargados = []
-const mensajesCargados = [
-    {
-        email: "nicolas@gmail.com",
-        mensaje: "Hola"
-    }
-]
+const mensajesCargados = []
 
 //Servidor de socket
 const { Server, Socket } = require("socket.io")
@@ -65,17 +60,15 @@ io.on("connection", (socket) => { //socket contiene todos los eventos io, emit ,
     socket.on("mensaje_cliente", (mensajesData) => {
         console.log(mensajesData)
     })
-    socket.on("data_mensaje", (mensajesData) => {
+    socket.on("data_mensajes", (mensajesData) => {
         console.log(mensajesData)
         mensajesCargados.push(mensajesData)
+        io.sockets.emit("mensaje_back", mensajesCargados) // conecto a todos los que esten en el servidor
     })
     
 })
 
-    // io.on("connection", (socket) => {
-    //     console.log("Usuario conectado al chat")
-    //     socket.emit()
-    // })
+
 
 server.listen(port, () => {
     console.log("Port Running" + port)

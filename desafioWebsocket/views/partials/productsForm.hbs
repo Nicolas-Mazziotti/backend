@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h2>Ingrese su producto</h2>
     <form>
         <label for=""> Modelo </label>
         <input type="text" id="formModelo">
@@ -18,6 +18,18 @@
         <input type="submit" value="Enviar" id="btnSubmit">
     </form>
     <div id="containerProductos"></div>
+
+        <div class="chatContainer">
+            <h2>Chatbox</h2>
+        <form class="d-flex row col-md-4 text-center" id="formulario">
+            {{!-- <h2>Chatbox</h2> --}}
+            <input type="text" placeholder="Ingrese su email" name="" id="formEmail" class="m-5">
+            <input type="text" placeholder="Ingrese un mensaje" name="" id="formMensaje" class="m-5 p-3" > 
+            <input type="submit" value="Enviar" class="m-5" id="btnMensajes"> 
+        </form>
+    
+    <div id="containerMensajes"></div>
+    </div>
 
 
 
